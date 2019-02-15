@@ -8,18 +8,22 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
 
-        // appBar: new AppBar(
-        //   title: new Text("TOP"),
-        // ),
+        appBar: new AppBar(
+          title: new Text("TOP"),
+        ),
         body: Column(
       children: <Widget>[
         Text(
           "Title Widget here",
-          style: new TextStyle(color: Colors.black),
+          style: new TextStyle(
+              color: Colors.black,
+              fontSize: 30.0
+            ),
         ),
         Padding(
           padding: EdgeInsets.all(screenHeight * 0.15),
         ),
+        //Menu Box
         ConstrainedBox(
           constraints: BoxConstraints(
             minWidth: screenWidth,
@@ -38,14 +42,31 @@ class HomePage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
                         Expanded(
-                          child: RaisedButton(
-                            child: Text("btn1"),
-                            onPressed: () {},  
-                          ),
+                          child: FlatButton(
+                            onPressed: () {},
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                // Icon(
+                                //   Icons.ac_unit,
+                                //   size: 40.0,
+                                // ),
+                                Image.asset('assets/donate.png'),
+                                Text("FlatButton")
+                              ],
+                            ),
+                          )
                         ),
                         Expanded(
                           child: RaisedButton(
-                            child: Text("btn2"),
+
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image(image: AssetImage('assets/internet.png'),),
+                              Text("IconButton")
+                              ],
+                            ),
                             onPressed: () {},
                           ),
                         ),
@@ -59,16 +80,54 @@ class HomePage extends StatelessWidget {
                     )
                 ),
                 Expanded(
-                  child: RaisedButton(
-                    child: Text("btn2"),
-                    onPressed: () {},
-                  ),
+                  child: new Row(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        Expanded(
+                          child: RaisedButton(
+                            child: Text("btn4"),
+                            onPressed: () {},  
+                          ),
+                        ),
+                        Expanded(
+                          child: RaisedButton(
+                            child: Text("btn5"),
+                            onPressed: () {},
+                          ),
+                        ),
+                        Expanded(
+                            child: RaisedButton(
+                            child: Text("btn6"),
+                            onPressed: () {},
+                          ),
+                        ),
+                      ],
+                    )
                 ),
                 Expanded(
-                  child: RaisedButton(
-                    child: Text("btn3"),
-                    onPressed: () {},
-                  ),
+                  child: new Row(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        Expanded(
+                          child: RaisedButton(
+                            child: Text("btn7"),
+                            onPressed: () {},  
+                          ),
+                        ),
+                        Expanded(
+                          child: RaisedButton(
+                            child: Text("btn8"),
+                            onPressed: () {},
+                          ),
+                        ),
+                        Expanded(
+                            child: RaisedButton(
+                            child: Text("btn9"),
+                            onPressed: () {},
+                          ),
+                        ),
+                      ],
+                    )
                 )
               ],
             ),
