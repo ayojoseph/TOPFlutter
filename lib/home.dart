@@ -11,140 +11,291 @@ class HomePage extends StatelessWidget {
           title: new Text("TOP"),
         ),
         body: Container(
-          decoration: new BoxDecoration(
-            image: DecorationImage(
-              image: ExactAssetImage('assets/knee.jpg'),
-              fit: BoxFit.cover
+            decoration: new BoxDecoration(
+              image: DecorationImage(
+                  image: ExactAssetImage('assets/knee.jpg'), fit: BoxFit.cover),
             ),
-          ),
             child: Column(
-            children: <Widget>[
-              Text(
-                "Title Widget here",
-                style: new TextStyle(color: Colors.white, fontSize: 30.0),
-              ),
-              Padding(
-                padding: EdgeInsets.all(screenHeight * 0.15),
-              ),
-              //Menu Box
-              ConstrainedBox(
-                constraints: BoxConstraints(
-                  minWidth: screenWidth,
-                  maxWidth: screenWidth,
-                  minHeight: screenHeight * 0.5,
-                  maxHeight: screenHeight * 0.5,
+              children: <Widget>[
+                Text(
+                  "Title Widget here",
+                  style: new TextStyle(color: Colors.white, fontSize: 30.0),
                 ),
-                child: Container(
-                  padding: EdgeInsets.all(10.0),
-                  // color: Colors.amber,
-                  child: new Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      Expanded(
-                          child: new Row(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: <Widget>[
-                          Expanded(
-                              child: new Container(
-                                decoration: new BoxDecoration(
-                                  // borderRadius: BorderRadius.circular(1.0),
-                                  shape: BoxShape.circle,
-                                  color: Colors.lime
-                                ),
-                                child: FlatButton(
-                                  // padding: EdgeInsets.all(1.0),
-                            onPressed: () {},
-                            child: Column(
-
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                // Icon(
-                                //   Icons.ac_unit,
-                                //   size: 40.0,
-                                // ),
-                                Image.asset('assets/donate.png', fit: BoxFit.scaleDown,),
-                                Text("FlatButton")
-                              ],
-                            ),
-                            )
-                              ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                Padding(
+                  padding: EdgeInsets.all(screenHeight * 0.1),
+                ),
+                //Menu Box
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minWidth: screenWidth,
+                    maxWidth: screenWidth,
+                    minHeight: screenHeight * 0.5,
+                    maxHeight: screenHeight * 0.6,
+                  ),
+                  child: Container(
+                    padding: EdgeInsets.all(10.0),
+                    // color: Colors.amber,
+                    child: new Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        Expanded(
+                            child: new Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            Expanded(
+                              child: new FlatButton(
+                                child: Stack(
+                                  alignment: const Alignment(0.0, 1.4),
                                 children: <Widget>[
-                                  Image(
-                                    image: AssetImage('assets/internet.png'),
+                                  new Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    color: Colors.green.withOpacity(0.9),
+                                    child: new Image.asset("assets/donate.png"),
                                   ),
-                                  Text("IconButton")
+                                  new Container(
+                                    
+                                    padding: EdgeInsets.all(2.0),
+                                    color: Colors.blue.withOpacity(0.8),
+                                    child: new Text(
+                                      "Give",
+                                      style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15.0
+                                      ),),
+                                  )
                                 ],
                               ),
                               onPressed: () {},
+                              )
                             ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              child: Text("btn3"),
+                            Expanded(
+                              child: new FlatButton(
+                                child: Stack(
+                                  alignment: const Alignment(0.0, 1.4),
+                                children: <Widget>[
+                                  new Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    color: Colors.green.withOpacity(0.9),
+                                    child: new Image.asset("assets/contact.png"),
+                                  ),
+                                  new Container(
+                                    
+                                    padding: EdgeInsets.all(2.0),
+                                    color: Colors.blue.withOpacity(0.8),
+                                    child: new Text(
+                                      "Contact Us",
+                                      style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15.0
+                                      ),),
+                                  )
+                                ],
+                              ),
                               onPressed: () {},
+                              )
                             ),
-                          ),
-                        ],
-                      )),
-                      Expanded(
-                          child: new Row(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: <Widget>[
-                          Expanded(
-                            child: RaisedButton(
-                              child: Text("btn4"),
+                            Expanded(
+                              child: new FlatButton(
+                                child: Stack(
+                                  alignment: const Alignment(0.0, 1.4),
+                                children: <Widget>[
+                                  new Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    color: Colors.green.withOpacity(0.9),
+                                    child: new Image.asset("assets/internet.png"),
+                                  ),
+                                  new Container(
+                                    
+                                    padding: EdgeInsets.all(2.0),
+                                    color: Colors.blue.withOpacity(0.8),
+                                    child: new Text(
+                                      "Website",
+                                      style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15.0
+                                      ),),
+                                  )
+                                ],
+                              ),
                               onPressed: () {},
+                              )
                             ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              child: Text("btn5"),
+                          ],
+                        )),
+                        Expanded(
+                            child: new Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            Expanded(
+                              child: new FlatButton(
+                                child: Stack(
+                                  alignment: const Alignment(0.0, 1.4),
+                                children: <Widget>[
+                                  new Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    color: Colors.green.withOpacity(0.9),
+                                    child: new Image.asset("assets/giftbox.png"),
+                                  ),
+                                  new Container(
+                                    
+                                    padding: EdgeInsets.all(2.0),
+                                    color: Colors.blue.withOpacity(0.8),
+                                    child: new Text(
+                                      "Events",
+                                      style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15.0
+                                      ),),
+                                  )
+                                ],
+                              ),
                               onPressed: () {},
+                              )
                             ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              child: Text("btn6"),
+                            Expanded(
+                              child: new FlatButton(
+                                child: Stack(
+                                  alignment: const Alignment(0.0, 1.4),
+                                children: <Widget>[
+                                  new Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    color: Colors.green.withOpacity(0.9),
+                                    child: new Image.asset("assets/internet.png"),
+                                  ),
+                                  new Container(
+                                    
+                                    padding: EdgeInsets.all(2.0),
+                                    color: Colors.blue.withOpacity(0.8),
+                                    child: new Text(
+                                      "Sermons",
+                                      style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15.0
+                                      ),),
+                                  )
+                                ],
+                              ),
                               onPressed: () {},
+                              )
                             ),
-                          ),
-                        ],
-                      )),
-                      Expanded(
-                          child: new Row(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: <Widget>[
-                          Expanded(
-                            child: RaisedButton(
-                              child: Text("btn7"),
+                            Expanded(
+                              child: new FlatButton(
+                                child: Stack(
+                                  alignment: const Alignment(0.0, 1.4),
+                                children: <Widget>[
+                                  new Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    color: Colors.green.withOpacity(0.9),
+                                    child: new Image.asset("assets/internet.png"),
+                                  ),
+                                  new Container(
+                                    
+                                    padding: EdgeInsets.all(2.0),
+                                    color: Colors.blue.withOpacity(0.8),
+                                    child: new Text(
+                                      "About Us",
+                                      style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15.0
+                                      ),),
+                                  )
+                                ],
+                              ),
                               onPressed: () {},
+                              )
                             ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              child: Text("btn8"),
+                          ],
+                        )),
+                        Expanded(
+                            child: new Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            Expanded(
+                              child: new FlatButton(
+                                child: Stack(
+                                  alignment: const Alignment(0.0, 1.4),
+                                children: <Widget>[
+                                  new Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    color: Colors.green.withOpacity(0.9),
+                                    child: new Image.asset("assets/internet.png"),
+                                  ),
+                                  new Container(
+                                    
+                                    padding: EdgeInsets.all(2.0),
+                                    color: Colors.blue.withOpacity(0.8),
+                                    child: new Text(
+                                      "Connect",
+                                      style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15.0
+                                      ),),
+                                  )
+                                ],
+                              ),
                               onPressed: () {},
+                              )
                             ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              child: Text("btn9"),
+                            Expanded(
+                              child: new FlatButton(
+                                child: Stack(
+                                  alignment: const Alignment(0.0, 1.4),
+                                children: <Widget>[
+                                  new Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    color: Colors.green.withOpacity(0.9),
+                                    child: new Image.asset("assets/internet.png"),
+                                  ),
+                                  new Container(
+                                    
+                                    padding: EdgeInsets.all(2.0),
+                                    color: Colors.blue.withOpacity(0.8),
+                                    child: new Text(
+                                      "Button 8",
+                                      style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15.0
+                                      ),),
+                                  )
+                                ],
+                              ),
                               onPressed: () {},
+                              )
                             ),
-                          ),
-                        ],
-                      ))
-                    ],
+                            Expanded(
+                              child: new FlatButton(
+                                child: Stack(
+                                  alignment: const Alignment(0.0, 1.4),
+                                children: <Widget>[
+                                  new Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    color: Colors.cyanAccent.withOpacity(0.9),
+                                    child: new Image.asset("assets/internet.png"),
+                                  ),
+                                  new Container(
+                                    
+                                    padding: EdgeInsets.all(2.0),
+                                    color: Colors.blue.withOpacity(0.8),
+                                    child: new Text(
+                                      "Button 9",
+                                      style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15.0
+                                      ),),
+                                  )
+                                ],
+                              ),
+                              onPressed: () {},
+                              )
+                            ),
+                          ],
+                        ))
+                      ],
+                    ),
                   ),
-                ),
-              )
-            ],
-        )));
+                )
+              ],
+            )));
   }
 }
 
