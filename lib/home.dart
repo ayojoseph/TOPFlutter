@@ -1,10 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'contact.dart';
+import 'events.dart';
+import 'give.dart';
+import 'about.dart';
+import 'connect.dart';
+import 'website.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  Future launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url, forceSafariVC: true, forceWebView: true);
+    }
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+    String weburl = "https://overcomerhouse.com";
+    // String weburl = "https://www.facebook.com/overcomerhouse/";
 
     return Scaffold(
         appBar: new AppBar(
@@ -65,7 +85,9 @@ class HomePage extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => new GivePage()));
+                              },
                               )
                             ),
                             Expanded(
@@ -91,7 +113,9 @@ class HomePage extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => new ContactPage()));
+                              },
                               )
                             ),
                             Expanded(
@@ -117,7 +141,9 @@ class HomePage extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                launchURL(weburl);
+                              },
                               )
                             ),
                           ],
@@ -149,7 +175,9 @@ class HomePage extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => new EventsPage()));
+                              },
                               )
                             ),
                             Expanded(
@@ -167,7 +195,7 @@ class HomePage extends StatelessWidget {
                                     padding: EdgeInsets.all(2.0),
                                     color: Colors.blue.withOpacity(0.8),
                                     child: new Text(
-                                      "Sermons",
+                                      "Connect",
                                       style: new TextStyle(
                                         color: Colors.white,
                                         fontSize: 15.0
@@ -175,7 +203,9 @@ class HomePage extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => new ConnectPage()));
+                              },
                               )
                             ),
                             Expanded(
@@ -201,7 +231,9 @@ class HomePage extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => new AboutPage()));
+                              },
                               )
                             ),
                           ],
@@ -225,7 +257,7 @@ class HomePage extends StatelessWidget {
                                     padding: EdgeInsets.all(2.0),
                                     color: Colors.blue.withOpacity(0.8),
                                     child: new Text(
-                                      "Connect",
+                                      "Button 7",
                                       style: new TextStyle(
                                         color: Colors.white,
                                         fontSize: 15.0
