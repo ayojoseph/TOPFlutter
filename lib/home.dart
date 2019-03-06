@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Future launchURL(String url) async {
     if (await canLaunch(url)) {
-      await launch(url, forceSafariVC: true, forceWebView: true);
+      await launch(url, forceSafariVC: true, forceWebView: false);
     }
     
   }
@@ -257,7 +257,7 @@ class _HomePageState extends State<HomePage> {
                                     padding: EdgeInsets.all(2.0),
                                     color: Colors.blue.withOpacity(0.8),
                                     child: new Text(
-                                      "Button 7",
+                                      "Prayer Requests",
                                       style: new TextStyle(
                                         color: Colors.white,
                                         fontSize: 15.0
@@ -283,7 +283,7 @@ class _HomePageState extends State<HomePage> {
                                     padding: EdgeInsets.all(2.0),
                                     color: Colors.blue.withOpacity(0.8),
                                     child: new Text(
-                                      "Button 8",
+                                      "Videos",
                                       style: new TextStyle(
                                         color: Colors.white,
                                         fontSize: 15.0
@@ -309,7 +309,7 @@ class _HomePageState extends State<HomePage> {
                                     padding: EdgeInsets.all(2.0),
                                     color: Colors.blue.withOpacity(0.8),
                                     child: new Text(
-                                      "Button 9",
+                                      "Prayer Line",
                                       style: new TextStyle(
                                         color: Colors.white,
                                         fontSize: 15.0
